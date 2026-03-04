@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phase 2 Final Concept</title>
+
+<style>
+
+/* Box Model */
+body{
+    font-family: Arial;
+    margin:20px;
+}
+
+/* Table */
+table{
+    width:300px;
+    border-collapse:collapse;
+    background-color:lightyellow;
+    margin-bottom:20px;
+}
+
+th, td{
+    padding:10px;
+    border:1px solid black;
+}
+
+thead{ background-color:orange; }
+tfoot{ background-color:lightgray; text-align:center; }
+
+/* Form */
+form{
+    width:300px;
+    padding:15px;
+    border:2px solid black;
+    margin-top:10px;
+    box-sizing:border-box;   /* box-sizing covered */
+}
+
+input, select, textarea{
+    width:100%;
+    padding:5px;
+    margin-bottom:10px;
+}
+
+button{
+    background-color:blue;
+    color:white;
+    padding:8px;
+    border:none;
+    display:inline-block;   /* inline-block covered */
+}
+
+/* Display */
+.block{ display:block; }
+.inline{ display:inline; color:red; }
+.none{ display:none; }
+
+/* Flex & Grid */
+.flex-box{
+    display:flex;
+    gap:10px;
+}
+
+.grid-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:5px;
+}
+
+/* Overflow */
+.auto{ overflow:auto; height:40px; border:1px solid black; }
+.scroll{ overflow:scroll; height:40px; border:1px solid black; }
+.hidden{ overflow:hidden; height:40px; border:1px solid black; }
+
+/* Position & Z-index */
+.relative{
+    position:relative;
+    left:20px;
+    background-color:lightblue;
+    z-index:1;
+}
+
+.absolute{
+    position:absolute;
+    top:10px;
+    left:200px;
+    background-color:pink;
+}
+
+.fixed{
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    background-color:yellow;
+}
+
+.sticky{
+    position:sticky;
+    top:0;
+    background-color:lightgreen;
+}
+
+/* Visibility */
+.hide{
+    visibility:hidden;
+}
+
+/* Media */
+video{
+    border:2px solid black;
+}
+
+iframe{
+    border:3px solid black;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>1. Table Example</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>City</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Devyani</td>
+<td>Kolhapur</td>
+</tr>
+</tbody>
+
+<tfoot>
+<tr>
+<td colspan="2">Student Data</td>
+</tr>
+</tfoot>
+</table>
+
+<hr>
+
+<h2>2. Form Example</h2>
+
+<form>
+
+<label>Name:</label>
+<input type="text" placeholder="Enter name" required pattern="[A-Za-z]+">
+
+<label>Age:</label>
+<input type="number" min="18" max="60" required>
+
+<label>Email:</label>
+<input type="email" required>
+
+<label>Password:</label>
+<input type="password" minlength="6" required>
+
+<label>Gender:</label>
+<input type="radio" name="g"> Female
+<input type="radio" name="g"> Male
+
+<label>Skills:</label>
+<input type="checkbox"> HTML
+<input type="checkbox"> CSS
+
+<label>City:</label>
+<select>
+<option>Pune</option>
+<option>Kolhapur</option>
+</select>
+
+<label>Message:</label>
+<textarea rows="3"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<hr>
+
+<h2>3. Div & Span</h2>
+
+<div class="block">
+DIV is block element
+<span class="inline">SPAN is inline</span>
+</div>
+
+<div class="flex-box">
+<div style="background:lightgray;">Flex 1</div>
+<div style="background:lightgray;">Flex 2</div>
+</div>
+
+<div class="grid-box">
+<div style="background:lightpink;">Grid 1</div>
+<div style="background:lightpink;">Grid 2</div>
+</div>
+
+<div class="auto">Overflow Auto Example Content Content Content</div>
+<div class="scroll">Overflow Scroll Example Content Content Content</div>
+<div class="hidden">Overflow Hidden Example Content Content Content</div>
+
+<div class="relative">Relative</div>
+<div class="absolute">Absolute</div>
+<div class="sticky">Sticky</div>
+<div class="fixed">Fixed</div>
+
+<p class="hide">This text is hidden</p>
+
+<hr>
+
+<h2>4. Media</h2>
+
+<audio controls>
+<source src="sample.mp3" type="audio/mpeg">
+<source src="sample.ogg" type="audio/ogg">
+</audio>
+
+<br><br>
+
+<video width="200" controls>
+<source src="sample.mp4" type="video/mp4">
+<source src="sample.webm" type="video/webm">
+</video>
+
+<hr>
+
+<h2>5. Iframe</h2>
+
+<!-- YouTube -->
+<iframe width="300" height="200"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ">
+</iframe>
+
+<br><br>
+
+<!-- Google Maps -->
+<iframe width="300" height="200"
+src="https://maps.google.com/maps?q=Pune&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</body>
+</html>
